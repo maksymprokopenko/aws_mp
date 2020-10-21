@@ -1,1 +1,8 @@
+/fe/build
+
+# package directories
 /fe/node_modules
+/fe/jspm_packages
+
+# Serverless directories
+/fe/.serverless
