@@ -21,9 +21,9 @@ export default function ProductsTable() {
   }, []);
 
   const onDelete = (id: string) => {
-    axios.delete(`${API_PATHS.bff}/product?id=${id}`)
+    axios.delete(`${API_PATHS.bff}/product/${id}`)
       .then(() => {
-        axios.get(`${API_PATHS.bff}/products`)
+        axios.get(`${API_PATHS.bff}/product`)
           .then(res => setProducts(res.data));
         }
       );
