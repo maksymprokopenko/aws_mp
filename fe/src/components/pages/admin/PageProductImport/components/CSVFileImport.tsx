@@ -34,11 +34,11 @@ export default function CSVFileImport({url, title}: CSVFileImportProps) {
     let authDataLs = localStorage.getItem('auth') as string;
 
     if (!authDataLs) {
-      localStorage.setItem('auth', 'bWFrc3ltcHJva29wZW5rbz1URVNUX1BBU1NXT1JE');
+      localStorage.setItem('auth', 'maksymprokopenko=TEST_PASSWORD');
       authDataLs = localStorage.getItem('auth') as string;
     }
 
-    return authDataLs;
+    return btoa(authDataLs);
   };
 
   const uploadFile = async (e: any) => {
